@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VANTA - Instituo Tecnologico</title>
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+<body>
+    <header class="barra">
+        <div class="contenedor fila">
+            <a href="#inicio" class="logo">
+                <img src="images/logo Vanta.jpg" alt="Icono Vanta" class="img-logo">
+                VAN<span>TA</span></a>
+            <button id="btn-movil" class="btn-movil">☰</button>
+            <nav id="menu" class="menu">
+                <a href="#inicio" class="link-menu">Inicio</a>
+                <a href="#talleres" class="link-menu">Estudiantes</a>
+                <a href="#carreras" class="link-menu">Carreras</a>
+                <a href="#matricula" class="btn btn-amarillo">Postular</a>
+            </nav>    
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <section id="inicio" class="portada">
+            <h1>Formación Técnica real en <span class="txt-fucsia">Tecnologías</span></h1>
+            <p>Aprende desarrollo, hardware y diseño con proyectos prácticos desde el primer ciclo.</p>
+            <a href="#matricula" class="btn btn-amarillo"> Inscribirse Ahora</a>
+        </section>
+
+        <section id="talleres" class="carrusel">
+            <h2>Nuestros Laboratorios</h2>
+            <p>Preparandolos para un futuro mejor</p><br>
+            <div class="visor-foto">
+                <div class="foto visible">
+                    <img src="images/primera seccion.jpg" alt="Software">
+                    <div class="pie-foto">
+                        <h3>Laboratorio de Software & IA</h3>
+                        <p>Desarrollo Web y programación aplicada desde el primer ciclo.</p>
+                    </div>
+                </div>
+                <div class="foto">
+                    <img src="images/segunad opcion.jpg" alt="Hardware">
+                    <div class="pie-foto">
+                        <h3>Taller de Hardware e IoT</h3>
+                        <p>Diagnóstico físico, ensamblaje y conectividad de redes.</p>
+                    </div>
+                </div>
+                <div class="foto">
+                    <img src="images/tercera.jpg" alt="Diseño">
+                    <div class="pie-foto">
+                        <h3>Célula de Diseño</h3>
+                        <p>Prototipado UI/UX y creación de marcas interactivas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="controles">
+                <button type="button" id="btn-ant" class="btn btn-amarillo">Anterior</button>
+                <button type="button" id="btn-sig" class="btn btn-amarillo">Siguiente</button>
+            </div>
+        </section>
+
+        <section id="carreras" class="carreras">
+            <h2>Especialidades Técnicas</h2>
+            <div class="grilla">
+                <div class="tarjeta">
+                    <h3>Software</h3>
+                    <p>Desarrollo web y bases de datos.</p>
+                    <a href="#matricula" class="btn btn-carrera">Elegir</a>
+                </div>
+                <div class="tarjeta">
+                    <h3>Diseño Digital</h3>
+                    <p>Branding, interfaces UI y prototipado.</p>
+                    <a href="#matricula" class="btn btn-carrera">Elegir</a>
+                </div>
+                <div class="tarjeta">
+                    <h3>Hardware & IoT</h3>
+                    <p>Ensamble, redes y sensores.</p>
+                    <a href="#matricula" class="btn btn-carrera">Elegir</a>
+                </div>
+                <div class="tarjeta">
+                    <h3>Marketing Web</h3>
+                    <p>Comercio electrónico y analítica.</p>
+                    <a href="#matricula" class="btn btn-carrera">Elegir</a>
+                </div>
+            </div>
+        </section><br><br>
+        <section id="matricula" class="matricula">
+            <h2>Ficha de Pre-Matricula</h2>
+            <form id="formulario">
+                <input type="text" id="campo-nombre" placeholder="Nombre Completo" required>
+                <input type="text" id="campo-dni" placeholder="DNI (8 dígitos)" maxlength="9" required>
+                <input type="text" id="campo-celular" placeholder="Celular (9 dígitos)" maxlength="9" required>
+                <input type="email" id="campo-correo" placeholder="Correo electrónico (@)" required>
+                <select id="campo-carrera" required>
+                    <option value="">Selecciona Carrera...</option>
+                    <option value="Software">Software</option>
+                    <option value="Diseño Digital">Diseño Digital</option>
+                    <option value="Hardware e IoT">Hardware e IoT</option>
+                    <option value="Marketing">Marketing Web</option>
+                </select>
+                <label class="check-label">
+                    <input type="checkbox" id="campo-terminos" required>Acepto términos y condiciones.
+                </label>
+                <button type="submit"class="btn btn-amarillo">Enviar Matrícula</button>
+                <p id="msg-error" class="error"></p>
+            </form>
+        </section>
+    </main>
+    <div id="modal" class="modal">
+        <div class="caja-modal">
+            <h3>¡Registro Exitoso!</h3>
+            <p id="datos-salida"></p>
+            <button id="btn-cerrar" class="btn btn-amarillo">Aceptar</button>
+        </div>
+    </div>
+    <footer class="pie">
+        <p>VANTA &copy, 2026 - Lurín, Lima Proyecto Web (by NMCQ)</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

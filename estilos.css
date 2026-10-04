@@ -1,0 +1,361 @@
+:root{
+    --fondo:#0a0714;
+    --tarjeta:#140d26;
+    --fucsia:#ec4899;
+    --amarillo:#facc15;
+    --blanco:#ffffff;
+    --gris:#94a3b8;
+    --rojo:#ff0055;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background: var(--fondo);
+    color: var(--blanco);
+    line-height: 1.5;
+}
+.contenedor{
+    max-width:900px;
+    margin: auto;
+    padding: 20px;
+
+}
+.txt-fucsia{
+    color: var(--fucsia);
+}
+
+.btn{
+    background: transparent;
+    color: var(--blanco);
+    border: 1px solid var(--gris);
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius:4px;
+    font-weight: bold;
+}
+.btn-amarillo{
+    background: var(--amarillo);
+    color:var(--fondo);
+    border: none;
+    text-decoration: none;
+}
+.btn-amarillo:hover{
+    background:#ffea00 ;
+}
+
+.barra {
+    width: 100%;
+    background: #06040d;
+    border-bottom: 1px solid #221a3a;
+    padding: 14px 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.fila{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--blanco);
+    text-decoration: none;
+}
+.img-logo {
+    width: 32px;            
+    height: 32px;               
+    object-fit: cover;
+    border-radius: 2px;         
+    border: 1px solid var(--fondo);
+}
+.logo span{
+    color: var(--fucsia);
+}
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.link-menu{
+    color: var(--gris);
+    text-decoration: none;
+}
+.link-menu:hover{
+    color: var(--fucsia);
+}
+.btn-movil {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    line-height: 1;
+}
+.portada{
+    text-align: center;
+    padding: 50px 0;
+}
+.portada h1{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.portada p{
+    color: var(--gris);
+    margin-bottom: 20px ;
+}
+.carrusel {
+    text-align: center;
+    margin: 40px auto;
+    position: relative;
+    max-width: 900px;
+}
+.carrusel h2{
+    margin-bottom: 15px;
+    text-align: center;
+}
+.visor-foto{
+    position: relative;
+    width: 100%;
+    height: 380px;
+    border-radius: 8px;
+    overflow:hidden;
+    background: #000;
+}
+.foto{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.foto.visible{
+    display: block;
+}
+.foto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.75);
+}
+.pie-foto{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(10,7,20,0.85);
+    padding: 12px 10px;
+    border-radius: 6px;
+    border-left: 4px solid var(--amarillo);
+    border-right: 4px solid var(--fucsia);
+    text-align: left;
+}
+.pie-foto h3{
+    color: var(--amarillo);
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+.pie-foto p{
+    color: var(--blanco);
+    font-size: 14px;
+}
+.controles {
+    position: relative;
+    z-index: 30;            
+    margin-top: 18px;        
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.controles button {
+    background-color: var(--amarillo);
+    color: #000000;
+    border: 1px solid var(--amarillo);
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.controles button:hover {
+    background-color: #ffea00;
+}
+#btn-ant,
+#btn-sig {
+    color: var(--fondo);
+    background-color: var(--amarillo);
+    border: 1px solid var(--amarillo);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 18px;
+    cursor: pointer;
+}
+
+#btn-ant:hover,
+#btn-sig:hover {
+    background-color: #ffea00;
+    border-color: var(--blanco);
+}
+
+.carreras h2{
+    margin-bottom: 15px;
+    text-align: center;
+}
+.grilla{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.tarjeta h3{
+    color: var(--amarillo);
+    margin-bottom: 8px;
+}
+.tarjeta p {
+    color: var(--gris);
+    font-size:14px;
+    margin-bottom: 12px;
+}
+.btn.btn-carrera{
+    background: var(--amarillo);
+    color:var(--fondo);
+    border: none;
+    text-decoration: none
+}
+.btn.btn.btn-carrera:hover{
+    background:#ffea00;
+}
+.tarjeta{
+    background-color: #221a3a;
+    padding: 40px;
+    border-radius: 18px;
+    cursor: pointer;
+}
+.matricula h2{
+    margin-bottom: 15px;
+    text-align: center;
+}
+.matricula form{
+    background: var(--tarjeta);
+    padding: 25px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 500px;
+    margin: auto;
+}
+input, select{
+    padding: 10px;
+    background: #07040f;
+    border: 1px solid #33245c;
+    color: #fff;
+    border-radius: 4px;
+}
+.check-label{
+    font-size: 13px;
+    color:var(--gris);
+}
+.error{
+    color: var(--rojo);
+    font-size: 13px;
+    display: none;
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85); 
+    display: none;                          
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;                          
+}
+
+.modal.activo {
+    display: flex !important;
+}
+
+
+.caja-modal {
+    background-color: #140d26;              
+    border: 2px solid var(--fucsia);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 380px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
+}
+
+.caja-modal h3 {
+    color: var(--amarillo);
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.caja-modal p {
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+.pie{
+    text-align: center;
+    color: var(--gris);
+    font-size: 14px;
+    padding: 30px 0;
+    border-top: 1px solid #1a1230;
+    margin-top: 40px;
+}
+
+
+
+@media (max-width: 600px) {
+    .btn-movil {
+    display: block; 
+    }
+
+    .menu {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #06040d;
+        padding: 20px;
+        border-bottom: 1px solid #221a3a;
+    }
+
+    .menu.activo {
+        display: flex; 
+    }
+
+    .grilla {
+        grid-template-columns: 1fr;
+    }
+    }
+
+section {
+    scroll-margin-top: 80px;
+}
+html{
+    scroll-behavior: smooth;
+}
